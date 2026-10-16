@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Clara | Portfólio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Perfil -->
+        <img src="assets/Foto perfil.jpeg" alt="Foto de perfil" class="profile-img">
+        <h1 class="name">Maria Clara</h1>
+        <p class="role">Desenvolvedora Front-end do Programa Trilhas</p>
+
+        <!-- Menu Principal -->
+        <div id="home-section" class="section active">
+            <button class="menu-btn" onclick="showSection('about-section')">Sobre mim</button>
+            <button class="menu-btn" onclick="showSection('projects-section')">Veja meus projetos</button>
+            <a href="https://drive.google.com/drive/folders/1ZCFpiCq75jmShPk_KhpHqbdzmBl4y_CZ" class="menu-btn" target="_blank" rel="noopener" onclick="alert('Página de certificados!')">Acesse os meus certificados</a>
+        </div>
+
+        <!-- Sobre Mim -->
+        <div id="about-section" class="section">
+            <button class="back-btn" onclick="showSection('home-section')">← Voltar ao menu</button>
+            <p class="about-text">
+                Me formei recentemente em Licenciatura Pedagogia pela UEMA. Porém também me identifico com a Tecnologia e já realizei alguns cursos relacionados a mesma e Design gráfico e quero agregar as duas áreas. E sou estudante do programa Trilhas uma futura desenvolvedora Front-end, e estou em busca de aprimorar os conhecimentos e desenvolver minhas habilidades.
+            </p>
+        </div>
+
+        <!-- Projetos -->
+        <div id="projects-section" class="section">
+            <button class="back-btn" onclick="showSection('home-section')">← Voltar ao menu</button>
+            <div class="projects-grid">
+                <!-- Projeto 1 -->
+                <div class="project-card">
+                    <img src="assets/Projeto 1 Java-Script.png" alt="Projeto 1" class="project-img">
+                    <a href="https://github.com/MariClaraFront-end/Sistema-gamers.js" class="project-link" target="_blank" rel="noopener">Acessar projeto →</a>
+                </div>
+                <!-- Projeto 2 -->
+                <div class="project-card">
+                    <img src="assets/Projeto 2 HTML.png" alt="Projeto 2" class="project-img">
+                    <a href="https://github.com/MariClaraFront-end/HTML" class="project-link" target="_blank" rel="noopener">Acessar projeto →</a>
+                </div>
+                <!-- Projeto 3 -->
+                <div class="project-card">
+                    <img src="assets/img lista de compras.jpg" alt="Projeto 3" class="project-img">
+                    <a href="https://github.com/MariClaraFront-end/lista-de-compras" class="project-link" target="_blank" rel="noopener">Acessar projeto →</a>
+                </div>
+                <!-- Projeto 4 -->
+                <div class="project-card">
+                    <img src="assets/Jogos clássicos.png" alt="Projeto 4" class="project-img">
+                    <a href="https://github.com/MariClaraFront-end/Jogos-classicos" class="project-link" target="_blank" rel="noopener">Acessar projeto →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Redes Sociais -->
+        <div class="social-icons">
+            <a href="https://github.com/MariClaraFront-end" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
